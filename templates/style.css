@@ -1,0 +1,67 @@
+.head1{
+    text-align: center;
+}
+
+body{
+    background-image: url("ibeem2.png");
+    background-size: 17%;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+    color: ivory;
+    background-color: black;
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 18px;
+}
+
+
+a.one:visited {color:#0000ff;}
+a.one:hover {color:ivory;}
+
+a.two:visited {color:#0000ff;}
+a.two:hover {color:ivory;}
+
+h1.head1{
+    position: absolute;
+    left: -150px;
+    top: -22px;
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 38px;
+}
+
+h1.head2{
+    position: absolute;
+    left: 350px;
+    top: -22px;
+    font-family: DejaVu Sans Mono, monospace;
+
+}
+p{
+    font-size: 22px;
+}
+
+h1.head3{
+    position: absolute;
+    left: 330px;
+    top: -22px;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
+  }
+  
+  #loading-image {
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    z-index: 100;
+  }

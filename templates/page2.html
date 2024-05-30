@@ -1,0 +1,885 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <title>Your Trusted Technology Partner</title>
+  <!-- Meta tag Keywords -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="keywords"
+    content="IBM uses a mixture of mature Agile development capabilities, design thinking, and nearly 20 years of product development services. We have experience working in blockchain, NLP, ML and IOT based solutions." />
+  <!-- //Meta tag Keywords -->
+
+  <!-- Custom-Files -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" media="all">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/ibmstyles21.css') }}" media="all"> -->
+  <!-- 
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ibmstyles21.css"> -->
+
+  <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}" media="all">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}" media="all">
+
+  <!-- 
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	  <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" /> -->
+  <!-- Style-CSS -->
+  <!-- font-awesome-icons -->
+  <!-- <link href="css/font_awesome.css" rel="stylesheet"> -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- //font-awesome-icons -->
+  <!-- /Fonts -->
+  <link
+    href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+  <!-- //Fonts -->
+
+</head>
+
+<style>
+  #banner {
+    float: left;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  #banner::before {
+    content: '';
+    position: absolute;
+    background: #04ACFF;
+    width: 100%;
+    bottom: 0;
+    animation: wipe 5s cubic-bezier(.2, .6, .8, .4) forwards;
+  }
+
+  @keyframes wipe {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      height: 
+           {{accuracy1}}
+  }
+  }
+
+  #banner1 {
+    z-index: 3
+    display: -webkit-flex;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex
+    
+
+  }
+
+  #banner1::before {
+    content: '';
+
+    position: absolute;
+    background-color: #04ACFF;
+    width: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: lighten;
+    animation: wipe1 5s cubic-bezier(.1, .2, .3, .4) forwards;
+  }
+
+  @keyframes wipe1 {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      
+      height: {{accuracy2}}
+    }
+  }
+  #count {
+
+    position: inherit;
+    color: black;
+    font-size: large;
+    visibility: visible;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content {
+    margin: 50px auto;
+    border: 1px solid #999;
+    width: 60%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  span {
+    color: #666;
+    display: block;
+    padding: 0 0 5px;
+  }
+
+  .contact-form {
+    padding: 25px;
+    margin: 25px;
+    font-size: large;
+    box-shadow: 0 2px 5px #f5f5f5;
+    background: #eee;
+  }
+
+  input,
+  textarea {
+    width: relative;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #1c87c9;
+    outline: none;
+    border-radius: 20px;
+
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  button:hover {
+    background: #2371a0;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  select {
+    font-size: 2rem;
+    padding: 5px 8px;
+    background-color: white;
+    border-top: #02274a 0.5px solid;
+    ;
+    outline: none;
+    border-right: #02274a 0.5px solid;
+    ;
+    border-left: #02274a 0.5px solid;
+    ;
+    border-bottom: #02274a 0.5px solid;
+    padding: 0 0 3px 0;
+    font-size: 25px;
+    border-radius: 20px;
+
+  }
+
+  .submit-button {
+    border-radius: 20px;
+    background-color: #e9eff5;
+    font-family: 'Droid Sans', sans-serif;
+    color: #111010;
+    font-size: 20px;
+  }
+
+  .file-button {
+    border-radius: 20px;
+    background-color: #e9eff5;
+    font-family: 'Droid Sans', sans-serif;
+    color: #111010;
+    font-size: 15px;
+  }
+
+
+  .styled-select select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+  }
+
+  button.button {
+    background: none;
+    border-top: none;
+    outline: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: #02274a 0.5px solid;
+    padding: 0 0 3px 0;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 20px;
+
+  }
+
+  #modalForm {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  button.button:hover {
+    border-bottom: #a99567 1px solid;
+    color: green;
+  }
+
+  .label {
+    color: white;
+    padding: 8px;
+  }
+</style>
+
+
+
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <!-- nav -->
+      <nav class="py-3 d-lg-flex">
+        <div id="logo">
+          <h1> <a href="index.html">
+              <span class="fa" id="starttitle">IBM </span>
+              <span class="fa" id="endtitle">Security</span>
+
+            </a>
+          </h1>
+        </div>
+        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+        <input type="checkbox" id="drop" />
+        <ul class="menu ml-auto mt-1">
+          <li class="active"><a href="page2.html">Home</a></li>
+          <li class=""><a href="#about">About Us</a></li>
+          <li class=""><a href="#services">Services</a></li>
+          <li class=""><a href="#application">IBM DIFFERENTIAL PRIVACY APPLICATION</a></li>
+          <li class=""><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- //nav -->
+    </div>
+  </header>
+  <!-- //header -->
+
+
+  <!-- banner -->
+  <div class="banner" id="home">
+    <div class="layer">
+      <div class="container">
+        <div class="banner-text-w3pvt">
+          <!-- banner slider-->
+          <div class="csslider infinity" id="slider1">
+            <input type="radio" name="slides" checked="checked" id="slides_1" />
+            <input type="radio" name="slides" id="slides_2" />
+            <input type="radio" name="slides" id="slides_3" />
+            <ul class="banner_slide_bg">
+              <li>
+                <div class="w3ls_banner_txt">
+
+                  <h3 class="b-w3ltxt text-capitalize mt-md-4">IBM: You Are Gonna Need IT, we are the trusted partners
+                    offering everything you need as one stop solution!</h3>
+
+                  <!-- <a href="#about" class="btn btn-banner my-sm-3 mr-2">Read More</a> -->
+
+                </div>
+              </li>
+              <li>
+                <div class="w3ls_banner_txt">
+                  <h3 class="b-w3ltxt text-capitalize mt-md-4">DRY: Do Repeat Yourself, be consistent and achieve
+                    perfection!!</h3>
+
+                  <!-- <a href="#about" class="btn btn-banner my-sm-3 mr-2">Read More</a> -->
+
+                </div>
+              </li>
+              <li>
+                <div class="w3ls_banner_txt">
+                  <h3 class="b-w3ltxt text-capitalize mt-md-4">KISS: Keep It Super-Slick, our expertise and experience
+                    deliver the best!!!"</h3>
+
+                  <!-- <a href="#about" class="btn btn-banner my-sm-3 mr-2">Read More</a> -->
+
+                </div>
+              </li>
+            </ul>
+            <div class="navigation">
+              <div>
+                <label for="slides_1"></label>
+                <label for="slides_2"></label>
+                <label for="slides_3"></label>
+              </div>
+            </div>
+          </div>
+          <!-- //banner slider-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //banner -->
+  <!-- about -->
+  <section class="services py-5" id="services">
+    <div class="container py-md-5 py-3">
+      <h5 class="heading mb-2">Exclusive Services</h5>
+      <h3 class="heading  mb-5">We Provide Awesome Services</h3>
+      <div class="feature-grids row">
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+          <div class="bottom-gd">
+            <span>01</span>
+            <h3 class="mt-4">Product Development</h3>
+            <p class="mt-2">One stop solution to your journey thorugh Idea to POC, Protoype, MMVP, MVP to a world class
+              product!</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+          <div class="bottom-gd">
+            <span>02</span>
+            <h3 class="mt-4">Architectural Consulting</h3>
+            <p class="mt-2">We have 25+ years of together experience working on architecture design for big enterprises
+              as well as SMEs providing solutions to their business challenges.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+          <div class="bottom-gd">
+            <span>03</span>
+            <h3 class="mt-4"> Web Development</h3>
+            <p class="mt-2">Web applications are taking over internal as well as external business solutions. We have
+              rich expertise developing on premise and cloud based web applications using wide range of technology
+              options.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+          <div class="bottom-gd">
+            <span>04</span>
+            <h3 class="mt-4">Mobile Development</h3>
+            <p class="mt-2">We provide services to develop native and hybrid, cross platform mobile applications giving
+              rich user experience to the end users.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6  mb-5">
+          <div class="bottom-gd">
+            <span>05</span>
+            <h3 class="mt-4">DevOps Solutions</h3>
+            <p class="mt-2">Our devops service help manage continuous integration, continuous delivery, and continuous
+              deployment to achieve shorter development cycles, faster innovation and increased efficiency.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+          <div class="bottom-gd">
+            <span>06</span>
+            <h3 class="mt-4">Enterprise Solutions</h3>
+            <p class="mt-2">We offers customized enterprise IT solutions using ML AI, Blockchain, Big Data Analytics and
+              enterprise software to the clients globally to strengthen your company’s existing information management
+              system and help them achieve business goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //about -->
+  <!-- about bottom -->
+  <section class="about-bottom py-5" id="about">
+    <div class="container py-md-5 py-3">
+      <h5 class="heading mb-2">How we work</h5>
+      <h3 class="heading mb-sm-5 mb-3">HOw we deal about business</h3>
+      <div class="row">
+        <div class="col-lg-6 left-img">
+          <img src="static/about.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="col-lg-6 mt-lg-0 mt-4">
+          <div class="row inner-heading">
+            <div class="col-md-2">
+              <span class="fa fa-bullseye"></span>
+            </div>
+            <div class="col-md-10">
+              <h4 class="mt-md-0 mt-2">PROCESSES AT THE CORE</h4>
+              <p class="mt-3">There are many iterative practices, not only Agile, we implement the tailered best suited
+                methology to your needs. We have build an expertise using agile, scrum, kanban, lean, crystal, xp,
+                waterfall PRINCE2 and PMBOK, CPM, CCPM, IPM. This ensures we enable collaboration between all
+                stakeholders, engage them well, take best inputs, plan better and deliver the project successfully.
+                Continuous risk assessment, mitigation plan, transperancy and engagement keeps your confidence high.</p>
+              <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+            <div class="col-md-2 mt-5">
+              <span class="fa fa-lightbulb-o"></span>
+            </div>
+            <div class="col-md-10 mt-md-5">
+              <h4 class="mt-md-0 mt-2">CREATIVE IDEAS</h4>
+              <p class="mt-3">A motivational work environment and diverse skillset in the team that compliments each
+                other creates stipulated atmosphere for creative minds. We go extra mile to come up with ideas that
+                create value and exceed the expectations of our customers!!</p>
+              <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 mt-lg-0 mt-4">
+          <div class="row inner-heading">
+            <div class="col-md-2">
+              <span class="fa fa-question-circle"></span>
+            </div>
+            <div class="col-md-10">
+              <h4 class="mt-md-0 mt-2">STATE OF THE ART</h4>
+              <p class="mt-3">The technology world, especial software is moving at very high pace. We dedicate time and
+                effort to constantly research on evolving technology world and keep ourself equipped with latest &
+                greatest innovations, technologies, tools & practices to pick the most suitable technology stack for
+                your requirements. We are all equipped with Big Data, IoTs, Bockchain, Artifical Intelligence, Augmented
+                Reality and the list continues....</p>
+              <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+            <div class="col-md-2 mt-5">
+              <span class="fa fa-bullhorn"></span>
+            </div>
+            <div class="col-md-10 mt-md-5">
+              <h4 class="mt-md-0 mt-2">EXTREME EFFICIENCY</h4>
+              <p class="mt-3">A team of passionate people with great expertise and relevant experience backed up with
+                fine tuned processes gives highest productivity and excellent quality. We constantly convert repeated
+                tasks into reusable components to enrich our library that gives us ability work at high efficiency..</p>
+              <!-- <a href="#" class="btn">Read More</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 left-img">
+          <img src="static/st11.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="team py-5" id="application">
+    <div class="container py-md-5 py-3">
+      <div class="title-desc text-center">
+        <h5 class="heading heading1 mb-2"> IBM </h5>
+        <h3 class="heading heading1 mb-sm-5 mb-3">DIIFERENTIAL PRIVACY APPLICATION</h3>
+      </div>
+
+
+      <div class="section-2">
+        <!-- <div class="div-block-4"><img src="/static/ibeem2.png" loading="lazy" width="150	" height="150"  alt=""></div> -->
+        <div class="container-2 w-container">
+          <div class="w-form">
+            <style>
+              #myDIV {
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                background-color: lightblue;
+                margin-top: 10px;
+                margin-bottom: 10px;
+              }
+
+              .marquee {
+                height: 50px;
+                overflow: hidden;
+                position: relative;
+                background: #fefefe;
+                color: #333;
+                border: 10px solid #4a4a4a;
+              }
+
+              #myButton {
+                font-size: 20px;
+                background: none;
+                border-top: none;
+                outline: none;
+                border-right: none;
+                border-left: none;
+                border-radius: 50px;
+
+                font-family: 'Droid Sans', sans-serif;
+                color: #111010;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+              }
+
+              #myButton:hover {
+                border-bottom: #a99567 1px solid;
+                color: green;
+              }
+            </style>
+            <marquee behavior="scroll" direction="left">
+              <h3>Click the "SHOW INSTRUCTIONS" button to toggle between hiding and showing of instrucitons !</h3>
+            </marquee>
+
+
+
+
+            <button id="myButton" onclick="myFunction()">SHOW INSTRUCTIONS</button>
+
+            <div id="myDIV" style="display: none;">
+              <ul>
+                <li><b> CHOOSE A CSV FILE YOU NEED TO ATTAIN PRIVACY OR TEST YOUR ACCURACIES </b></li>
+                <li><b> UPLOAD IT USING THE TOOL BELOW BY CLICKING "UPLOAD CSV"<b> </li>
+                <li><b> NOW SELECT ONE OT THE FEATURES YOU WANT TO APPLY ON YOUR UPLOADED CSV<b> </li>
+                <li><b> THANK YOU!<b> </li>
+
+              </ul>
+            </div>
+
+
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myDIV");
+                var x1 = document.getElementById("myButton");
+
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                  x1.innerHTML = "HIDE INSTRUCTIONS"
+                } else {
+                  x1.innerHTML = "SHOW INSTRUCTIONS"
+
+                  x.style.display = "none";
+                }
+              }
+            </script>
+
+
+
+
+            <!-- <h1 class="heading-2">Upload Your Csv Here</h1> -->
+
+            <h2>What feature do you want to use?</h2>
+            <p>
+              <button class="button" data-modal="modalOne" data-toggle="modal">Dataset Noise Addition</button>
+            </p>
+            <p>
+              <button class="button" data-modal="modalTwo" data-toggle="modal">Comparision of ML Accuracies</button>
+            </p>
+            <div id="modalOne" class="modal">
+              <div class="modal-content">
+                <div class="contact-form">
+                  <span class="close">&times;</span>
+                  <form class="" action="" method="POST" enctype="multipart/form-data">
+
+                    <fieldset>
+                      <input type="file" name="csvfile" id="txtFileUpload" value="" accept=".csv"
+                        class="file-button w-button">
+                    </fieldset>
+                    <br>
+                    <p class="mt-2" for="Rows">Which column names contain private information? </p>
+                    <input type="text" id="private" name="private" required class="rows" multiple>
+                    <br>
+                    <br>
+                    <p for="Cols">Which of these columns contain binary values? </p>
+
+                    <input type="text" id="binary" name="binary" required>
+                    <br>
+                    <br>
+                    <p for="bin">Which of these contain categorical data? </p>
+                    <input type="text" id="categorical" name="categorical" required>
+                    <br>
+                    <br>
+                    <p for="namebin">Which of these columns contain only numerical data?</p>
+                    <input type="text" id="numerical" name="numerical" required>
+                    <br>
+                    <br>
+                    <p for="epsilon">What are the values of ‘epsilon’, ‘delta’ and ‘sensitivity’? </p>
+                    <input type="text" id="epsilon" name="epsilon" required>
+                    <br>
+                    <br>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+                    <br />
+                    <div id="nxtbutton">
+                      <div id="next-container1" style="display: none;">
+                        <button id="modalForm" class="button" data-modal="modalTwo" data-dismiss="#modalOne">Comparision
+                          of ML Accuracies</button>
+                      </div>
+                    </div>
+                    <div id="nxtbutton">
+                      <div id="next-container">
+                        <button type="submit" value="Upload Form" data-wait="Please Wait" class="submit-button w-button"
+                          href="/">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                  
+
+
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div id="modalTwo" class="modal">
+              <div class="modal-content">
+                <div class="contact-form">
+                  <span class="close">&times;</span>
+                  <form class="" action="" method="POST" enctype="multipart/form-data">
+
+                    <fieldset>
+                      <input type="file" name="csvfile" id="txtFileUpload" value="" accept=".csv"
+                        class="file-button w-button">
+                    </fieldset>
+                    <br>
+                    <p for="colinp">Which columns are your input data?</p>
+                    <input type="text" id="colinp" name="colinp" required class="colinp">
+                    <br>
+                    <br>
+                    <p for="colop">Which column is your output variable?</p>
+                    <input type="text" id="colop" name="colop" required class="colop">
+                    <br>
+                    <br>
+                    <p for="mlalgo">Which type of Machine Learning Algorithm would you like to implement? </p>
+                    <br>
+                    <div class="styled-select">
+                      <select name="mlalgo" id="mlalgo">
+                        <option value="1">Classification</option>
+                        <option value="2">Regression</option>
+                        <option value="3">Clustering</option>
+                      </select>
+                    </div>
+                    <p for="traintest">What is your train-percent and test-percent?</p>
+                    <input type="text" id="traintest" name="traintest" required class="traintest">
+                    <br>
+                    <br>
+                    <p for="mlpara">What is the value of epsilon, l2norm and number of clusters?</p>
+                    <input type="text" id="mlpara" name="mlpara" required class="mlpara">
+                    <br>
+                    <br>
+                    <div id="nxtbutton">
+                      <div id="next-container-3" style="display: none;">
+                        <button id=modalForm class="button" data-modal="modalOne" data-dismiss="#modalTwo">Dataset Noise
+                          Addition</button>
+                      </div>
+                    </div>
+                    <div id="nxtbutton">
+                      <div id="next-container-2">
+                        <button type="submit" value="Upload Form" data-wait="Please Wait" class="submit-button w-button"
+                          href="/">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <script>
+          let modalBtns = [...document.querySelectorAll(".button")];
+          modalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+              let modal = btn.getAttribute('data-modal');
+              document.getElementById(modal)
+                .style.display = "block";
+              if (modal == "modalOne") {
+                let modal1 = btn.closest('.modal');
+                modal1.style.display = "none";
+
+              }
+              else {
+                let modal1 = btn.closest('.modal');
+                modal1.style.display = "none";
+              }
+            }
+          });
+          let closeBtns = [...document.querySelectorAll(".close")];
+          closeBtns.forEach(function (btn) {
+            btn.onclick = function () {
+              let modal = btn.closest('.modal');
+              modal.style.display = "none";
+
+            }
+          });
+          window.onclick = function (event) {
+            if (event.target.className === "modal") {
+              event.target.style.display = "none";
+            }
+          }
+       
+          function myFunctionAuc() {
+            var teamid = document.getElementById("team");
+            if (teamid.style.display === "none") {
+              teamid.style.display = "block";
+            } else {
+              teamid.style.display = "none";
+            }
+          }
+        </script>
+
+
+  </section>
+
+  <!-- //about bottom -->
+  <!-- team -->
+  {% if accuracy1 != '' %}
+  <section class="team py-5" id="team">
+    <div class="container py-md-5 py-3">
+      <div class="title-desc text-center">
+        <h5 class="heading heading1 mb-2"> YOUR ACCURIES ARE AS FOLLOWS</h5>
+        <h3 class="heading heading1 mb-sm-5 mb-3">LEFT : NON PRIVATE ALGORITHM :: RIGHT : PRIVATE ALGORITHM</h3>
+      </div>
+      <div class="row team-grid">
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <!-- <div class="box13"> -->
+           
+
+          <div id="banner">
+         
+
+          </div>
+<br>
+<h3 class="heading heading1 mb-sm-5 mb-3">
+  {% if accuracy1 is defined %}
+  {{ accuracy1 }}
+{% else %}
+accuracy is not defined
+{% endif %}</h3>
+<br>        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <!-- <div class="box13"> -->
+     
+
+        </div>
+     
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div id="banner1">
+       
+
+          </div>
+          <br>
+          <h3 class="heading heading1 mb-sm-5 mb-3">
+          {% if accuracy2 is defined %}
+            {{ accuracy2 }}
+        {% else %}
+        accuracy is not defined
+        {% endif %}</h3>
+        <br>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </section>
+  {% endif %}
+  <!-- //team -->
+
+
+
+
+  <!-- //text -->
+  <!-- testimonials -->
+
+  <!-- testimonials -->
+
+  <!-- //Contact page -->
+
+
+  <!-- footer -->
+  <footer class="py-md-5 py-3">
+    <div class="container py-md-5 py-3">
+      <div class="row footer-grids">
+        <div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+          <h4 class="mb-4">IBM
+            <p class="mb-3">
+              IBM provides services in product development, web development, mobile development, technology solutions &
+              architectural consulting.</p>
+
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-md-0 mb-sm-5 mb-4">
+          <h4 class="mb-4">Address Info</h4>
+          <p><span class="fa mr-2 fa-map-marker"></span>102, Octave Complex, Baner Rd, Pallod Farms, Baner, Pune
+            <span>Maharashtra 411045</span></p>
+          <p class="phone py-2"><span class="fa mr-2 fa-phone"></span> 9767569906 </p>
+          <p><span class="fa mr-2 fa-envelope"></span><a href="mailto:contact@IBM.com">contact@IBM.com</a></p>
+        </div>
+        <div class="col-lg-2 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+          <h4 class="mb-4">Quick Links</h4>
+          <ul>
+            <!-- <li><a href="#register">Register here </a></li> -->
+            <li class="my-2"><a href="#team">Leadership Team</a></li>
+            <li><a href="#contact">Support Helpline</a></li>
+            <li class="mt-2"><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h4 class="mb-4">Subscribe Us</h4>
+          <p class="mb-3">Subscribe to our newsletter</p>
+          <form name="subscribe" action="#" method="POST" class="d-flex">
+            <input name="Email" type="email" placeholder="Your Email" required="">
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <!-- copyright -->
+  <div class="copyright">
+    <div class="container py-4">
+      <div class=" text-center">
+        <p>© 2019 promote. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
+      </div>
+    </div>
+  </div>
+  <!-- //copyright -->
+
+  <!-- move top -->
+  <div class="move-top text-right">
+    <a href="#home" class="move-top">
+      <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- move top -->
+
+
+</body>
+
+</html>
