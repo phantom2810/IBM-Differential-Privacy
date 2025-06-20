@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file
 import os
+import shutil
 from os.path import join, dirname, realpath
 from noise_add import noise_addd
 from model_test import model_check
+from dp_llm import train_dp_llm
 
 app = Flask(__name__)
 
@@ -112,5 +114,17 @@ def download(filename):
     path = f"files/{filename}.csv"
     return send_file(path, as_attachment=True)
 
-if (__name__ == "__main__"):
-     app.run(port = 5000)
+
+@app.route('/train_llm', methods=['POST'])
+def train_llm_endpoint():
+    model_name = request.form['model_name']
+    dataset_path = request.form['dataset_path']
+    epsilon = float(request.form.get('epsilon', 1.0))
+    delta = float(request.form.get('delta', 1e-5))
+    max_grad_norm = float(request.form.get('max_grad_norm', 1.0))
+    model_dir = train_dp_llm(model_name, dataset_path, epsilon, delta, max_grad_norm, output_dir=app.config['UPLOAD_FOLDER'])
+    archive = shutil.make_archive(model_dir, 'zip', model_dir)
+    return send_file(archive, as_attachment=True)
+
+if __name__ == "__main__":
+    app.run(port=5000)
