@@ -31,6 +31,8 @@ pip install diffprivlib
 
 # Install additional dependencies
 pip install numpy pandas scikit-learn matplotlib jupyter
+# Libraries for private language model fine-tuning
+pip install torch transformers datasets opacus
 ```
 
 ### Clone and Setup
@@ -63,6 +65,24 @@ dp_clf.fit(X_train, y_train)
 # Evaluate
 accuracy = dp_clf.score(X_test, y_test)
 print(f"Differentially private accuracy: {accuracy}")
+```
+
+### Private LLM Fine-Tuning
+
+You can also fine-tune Hugging Face language models with differential privacy using the
+`train_dp_llm` function:
+
+```python
+from dp_llm import train_dp_llm
+
+model_dir = train_dp_llm(
+    model_name="gpt2",
+    dataset_path="data/my_corpus.txt",
+    epsilon=5.0,
+    delta=1e-5,
+    max_grad_norm=1.0,
+)
+print("Model saved to", model_dir)
 ```
 
 ## Core Components
